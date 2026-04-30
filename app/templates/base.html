@@ -6,30 +6,32 @@
 
     <title>Flask Starter App</title>
 
-    <!-- Bootstrap -->
     <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
 
-    <!-- Application CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
-    {% block css %} {% endblock%}
+
+    {% block css %}{% endblock %}
   </head>
+
   <body>
     <header>
-        {% include "header.html" %}
+      {% include "header.html" %}
     </header>
+
     <main>
-        <div class="container">
-            {% block main %}{% endblock %}
-        </div>
+      <div class="container">
+        {% block main %}{% endblock %}
+      </div>
     </main>
+
     <footer>
-        <div class="container">
-            {% include "footer.html" %}
-        </div>
+      <div class="container">
+        {% include "footer.html" %}
+      </div>
     </footer>
 
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
-    {% block js %} {% endblock%}
+
+    {% block js %}{% endblock %}
   </body>
 </html>
